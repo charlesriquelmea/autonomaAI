@@ -4,7 +4,6 @@ export const landingContent = {
   // -------------------------------------------------------------------------------------
   en: {
     nav: { architecture: "Architecture", pricing: "Pricing" },
-    operation: {title: "Tu operación completa, visible en tiempo real"},
     hero: {
       eyebrow: "AI Sales Concierge",
       h1: "Stop Chasing Leads. Book Qualified Meetings 24/7.",
@@ -313,62 +312,210 @@ export const landingContent = {
         "Set & Forget"
       ]
     },
+    /*     pricing: {
+          title: "Investment Options Designed for ROI",
+          subtitle: "Pay for Performance—Literally · Three Tiers Built for Different Growth Stages",
+          eyebrow: "PRICING",
+          tiers: [
+            {
+              name: "Foundation",
+              tag: "TIER 1",
+              price: "$697",
+              dolar: "",
+              period: "/month",
+              setupFee: "+ $2,970 one-time setup",
+              setupAlt: "OR $2,970 one-time setup + 4.5% of AI-generated appointment revenue",
+              promo: "First month 50% discount",
+              description: "Best for: Single-location medspas doing $15K–50K/month",
+              roiTarget: "ROI Target: 3x in Month 1",
+              features: [
+                "Landing Page (One Single Page) in Next.js",
+                "Web Chat AI",
+                "Knowledge base — up to 10 services",
+                "AI Sales Concierge (qualifies + books: Google Calendar, trained on your PDFs/FAQs)",
+                "500 conversations/month",
+                "Webhook → automation engine (capture → trigger → flow)",
+                "CRM auto-sync (HubSpot / GoHighLevel / Salesforce / Airtable via API — check your plan — or our Open Source CRM)",
+                "Basic Nurture: Confirmation email",
+                "Basic monitoring + 1 monthly adjustment of prompts/flows",
+                "Support SLA: 12–8 hrs",
+                "LLM: OpenAI or Gemini"
+              ],
+              cta: "Get Started →",
+              highlight: false
+            },
+            {
+              name: "Free Pilot",
+              tag: "START FREE PILOT",
+              tagSub: "Available Only March",
+              price: "$0",
+              dolar: "",
+              period: "",
+              setupFee: "",
+              setupAlt: "",
+              promo: "",
+              description: "1-week trial on YOUR website with YOUR services. Zero risk.",
+              roiTarget: "",
+              urgency: "Only available during March 2025",
+              features: [
+                "Web Chat AI",
+                "AI Sales Concierge (qualifies + books: Google Calendar, trained on your PDFs/FAQs)",
+                "Knowledge base — up to 2 services",
+                "50 conversations",
+                "Basic Nurturing",
+                "Appointment Setting by email"
+              ],
+              cta: "Start Free Pilot →",
+              highlight: true,
+              footerNote: "No credit card required · Setup in 48 hrs · Your data, your site"
+            },
+            {
+              name: "Scale Formula",
+              tag: "COMING SOON",
+              price: "",
+              dolar: "",
+              period: "",
+              setupFee: "",
+              setupAlt: "",
+              promo: "",
+              description: "Advanced multi-location features. Pricing announced Q2 2025.",
+              roiTarget: "",
+              features: [],
+              cta: "Join Waitlist →",
+              highlight: false,
+              comingSoon: true
+            }
+          ],
+          comparison: {
+            title: "How Autonoma AI Compares to Other Options",
+            text: "To get what Autonoma does (qualify and book, trigger webhook workflows, sync CRM, send confirmations, and alert the owner), you typically end up building a piece-meal stack and connecting it manually. Autonoma packages it as a “set-and-forget” system: Narrow-scope AI Sales Concierge (qualify + book) + webhook automation + CRM sync + team alerts.",
+            cta: "See the full stack breakdown",
+            modal: {
+              title: "Build it piece‑by‑piece… or deploy one system",
+              subtitle: "Stop stitching tools together. Autonoma captures, qualifies, and books meetings—then syncs everything automatically.",
+              footer: "Autonoma runs the full flow “Webhook → CRM → Email → Alert” and notifies you only when there is a lead ready to buy.",
+              tableHeaders: {
+                features: "Features (what you need)",
+                replaces: "Replaces (typical stack pieces)",
+                tools: "Other tools (cost)",
+                autonoma: "Autonoma AI"
+              },
+              tableRows: [
+                { feat: "AI Sales Concierge (qualify + book only)", rep: "Generic chatbot + prompt mess", cost: "Varies", auto: true },
+                { feat: "Knowledge trained on your docs (PDF/RAG)", rep: "KB tool + vector DB setup", cost: "Varies", auto: true },
+                { feat: "Webhook → workflow automation", rep: "Zapier/Make/n8n DIY", cost: "Varies", auto: true },
+                { feat: "CRM auto-sync", rep: "Custom integrations / manual entry", cost: "Varies", auto: true },
+                { feat: "Confirmation email automation", rep: "Email tool + templates", cost: "Varies", auto: true },
+                { feat: "Owner alerts (Slack/Discord/Teams)", rep: "Separate notification plumbing", cost: "Varies", auto: true },
+                { feat: "Works with HubSpot/GoHighLevel/Salesforce/Airtable", rep: "Multiple connectors", cost: "Varies", auto: true },
+              ]
+            }
+          }
+        }, */
     pricing: {
-      title: "Investment Options Designed for ROI",
-      subtitle: "Pay for Performance—Literally · Three Tiers Built for Different Growth Stages",
+      title: "Investment Designed for ROI",
+      subtitle: "Pay for Performance · Three Levels for Different Growth Stages",
       eyebrow: "PRICING",
       tiers: [
         {
           name: "Foundation",
-          tag: "TIER 1",
+          tag: "LEVEL 1",
           price: "$697",
           dolar: "",
           period: "/month",
-          setupFee: "+ $2,970 one-time setup",
-          setupAlt: "OR $2,970 one-time setup + 4.5% of AI-generated appointment revenue",
+          setupFee: "+ $2,970 one-time setup payment",
+          setupAlt: "Or $2,970 one-time setup payment + 4.5% of revenue generated by AI",
           promo: "First month 50% discount",
-          description: "Best for: Single-location medspas doing $15K–50K/month",
+          description: "Ideal for: Single-location Medspas billing $15K–50K/month",
           roiTarget: "ROI Target: 3x in Month 1",
           features: [
-            "Landing Page (One Single Page) in Next.js",
+            "Landing Page (Single Page) in Next.js",
             "Web Chat AI",
             "Knowledge base — up to 10 services",
-            "AI Sales Concierge (qualifies + books: Google Calendar, trained on your PDFs/FAQs)",
+            "AI Sales Concierge (qualifies + schedules: Google Calendar, trained with your PDFs/FAQs)",
             "500 conversations/month",
             "Webhook → automation engine (capture → trigger → flow)",
-            "CRM auto-sync (HubSpot / GoHighLevel / Salesforce / Airtable via API — check your plan — or our Open Source CRM)",
-            "Basic Nurture: Confirmation email",
+            "CRM auto-sync (HubSpot / GoHighLevel / Salesforce / Airtable via API — depending on your plan — or our Open Source CRM)",
+            "Basic nurturing: Confirmation email",
             "Basic monitoring + 1 monthly adjustment of prompts/flows",
             "Support SLA: 12–8 hrs",
             "LLM: OpenAI or Gemini"
           ],
-          cta: "Get Started →",
+          cta: "Start →",
           highlight: false
         },
         {
           name: "Free Pilot",
           tag: "START FREE PILOT",
-          tagSub: "Available Only March",
+          tagSub: "Only in March",
           price: "$0",
           dolar: "",
           period: "",
           setupFee: "",
           setupAlt: "",
           promo: "",
-          description: "1-week trial on YOUR website with YOUR services. Zero risk.",
+          description: "1 week trial on YOUR website with YOUR services. No risk.",
           roiTarget: "",
           urgency: "Only available during March 2025",
           features: [
             "Web Chat AI",
-            "AI Sales Concierge (qualifies + books: Google Calendar, trained on your PDFs/FAQs)",
+            "AI Sales Concierge (qualifies + schedules: Google Calendar, trained with your PDFs/FAQs)",
             "Knowledge base — up to 2 services",
             "50 conversations",
-            "Basic Nurturing",
-            "Appointment Setting by email"
+            "Basic nurturing",
+            "Appointment scheduling via email"
           ],
           cta: "Start Free Pilot →",
           highlight: true,
-          footerNote: "No credit card required · Setup in 48 hrs · Your data, your site"
+          footerNote: "No credit card · Setup in 48 hrs · Your data, your site"
+        },
+        {
+          name: "Performance",
+          tag: "MOST POPULAR",
+          tagSub: "LEVEL 2",
+          price: "$797",
+          dolar: "",
+          period: "/month",
+          setupFee: "+ $3,470 one-time setup payment",
+          setupAlt: "Or $3,470 one-time setup payment + 5.5% of revenue generated by AI",
+          promo: "",
+          description: "Everything included in Foundation + SMS integration",
+          roiTarget: "ROI Target: 5x in Month 1",
+          features: [
+            "SMS integration",
+            "Knowledge base — up to 30 services (FAQs)",
+            "Unlimited conversations",
+            "A/B testing of conversational flows",
+            "Priority support (SLA 8–4 hrs)",
+            "Advanced nurturing with CRM / Sales Pipeline Dashboard",
+            "No-show reduction (automatic reminders)",
+            "Package upselling (AI identifies high-value patients)"
+          ],
+          cta: "Scale Now →",
+          highlight: false,
+          footerNote: "Ideal for: Growing Medspas ready to scale ($50K–100K/month)"
+        },
+        {
+          name: "Enterprise",
+          tag: "TIER 3",
+          price: "Custom Pricing",
+          dolar: "",
+          period: "",
+          setupFee: "$4,970 setup + $997/month + 6.5% of revenue generated by AI",
+          setupAlt: "",
+          promo: "",
+          description: "Everything included in Performance",
+          roiTarget: "ROI Target: 10x in the First Quarter",
+          features: [
+            "Multi-location management",
+            "White-label branding",
+            "Custom API integrations",
+            "Dedicated success manager",
+            "Quarterly business reviews"
+          ],
+          cta: "Contact Sales →",
+          highlight: false,
+          footerNote: "Ideal for: MedSpa chains or franchises ($100K+ monthly)"
         },
         {
           name: "Scale Formula",
@@ -379,36 +526,36 @@ export const landingContent = {
           setupFee: "",
           setupAlt: "",
           promo: "",
-          description: "Advanced multi-location features. Pricing announced Q2 2025.",
+          description: "Advanced features for multiple locations. Pricing announced Q2 2025.",
           roiTarget: "",
           features: [],
-          cta: "Join Waitlist →",
+          cta: "Join the Waitlist →",
           highlight: false,
           comingSoon: true
         }
       ],
       comparison: {
-        title: "How Autonoma AI Compares to Other Options",
-        text: "To get what Autonoma does (qualify and book, trigger webhook workflows, sync CRM, send confirmations, and alert the owner), you typically end up building a piece-meal stack and connecting it manually. Autonoma packages it as a “set-and-forget” system: Narrow-scope AI Sales Concierge (qualify + book) + webhook automation + CRM sync + team alerts.",
-        cta: "See the full stack breakdown",
+        title: "How Autonoma AI compares with other options",
+        text: "To get what Autonoma does (qualify and schedule, trigger webhook to workflows, sync CRM, send confirmations and alert the owner), you usually end up building a stack piece by piece and connecting it manually. Autonoma packages it as a “set-and-forget” system: AI Sales Concierge with narrow scope (qualify + schedule) + webhook automation + CRM sync + team alerts.",
+        cta: "See full stack breakdown",
         modal: {
-          title: "Build it piece‑by‑piece… or deploy one system",
-          subtitle: "Stop stitching tools together. Autonoma captures, qualifies, and books meetings—then syncs everything automatically.",
-          footer: "Autonoma runs the full flow “Webhook → CRM → Email → Alert” and notifies you only when there is a lead ready to buy.",
+          title: "Build it piece by piece... or deploy a system",
+          subtitle: "Stop patching tools together. Autonoma captures, qualifies, and schedules meetings, then syncs everything automatically.",
+          footer: "Autonoma runs the full flow “Webhook → CRM → Email → Alert” and notifies you only when there’s a lead ready to buy.",
           tableHeaders: {
-            features: "Features (what you need)",
-            replaces: "Replaces (typical stack pieces)",
+            features: "Functionalities (what you need)",
+            replaces: "Replaces (typical pieces)",
             tools: "Other tools (cost)",
             autonoma: "Autonoma AI"
           },
           tableRows: [
-            { feat: "AI Sales Concierge (qualify + book only)", rep: "Generic chatbot + prompt mess", cost: "Varies", auto: true },
-            { feat: "Knowledge trained on your docs (PDF/RAG)", rep: "KB tool + vector DB setup", cost: "Varies", auto: true },
-            { feat: "Webhook → workflow automation", rep: "Zapier/Make/n8n DIY", cost: "Varies", auto: true },
-            { feat: "CRM auto-sync", rep: "Custom integrations / manual entry", cost: "Varies", auto: true },
+            { feat: "AI Sales Assistant (qualifies + schedules)", rep: "Generic chatbot + prompt mess", cost: "Varies", auto: true },
+            { feat: "Knowledge trained with your docs (PDF/RAG)", rep: "KB tool + vector DB setup", cost: "Varies", auto: true },
+            { feat: "Webhook → flow automation", rep: "Zapier/Make/n8n (Do it yourself)", cost: "Varies", auto: true },
+            { feat: "Automatic CRM sync", rep: "Custom integrations / manual upload", cost: "Varies", auto: true },
             { feat: "Confirmation email automation", rep: "Email tool + templates", cost: "Varies", auto: true },
-            { feat: "Owner alerts (Slack/Discord/Teams)", rep: "Separate notification plumbing", cost: "Varies", auto: true },
-            { feat: "Works with HubSpot/GoHighLevel/Salesforce/Airtable", rep: "Multiple connectors", cost: "Varies", auto: true },
+            { feat: "Owner alerts (Slack/Discord/Teams)", rep: "Separate notification setup", cost: "Varies", auto: true },
+            { feat: "Works with HubSpot/GoHighLevel/Salesforce/Airtable", rep: "Multiple connectors", cost: "Varies", auto: true }
           ]
         }
       }
@@ -680,8 +827,24 @@ export const landingContent = {
         ai: { label: "AI Assistant", sublabel: "Qualifies + Books" },
         workflow: { label: "AI Workflow", sublabel: "n8n triggered" },
         crm: { label: "CRM / Sales Pipeline", sublabel: "ACTIVE" },
-        alert: { label: "Owner Alert", sublabel: "Meeting booked!" }
+        alert: { label: "Owner Alert", sublabel: "Meeting booked!" },
+        operation: { title: "Your entire operation, visible in real time" },
+        panelTitle: { title: "Control panel" },
+        headerDescription: { title: "From the first message to the delivered order — all in one place" },
       },
+
+      states: {
+        interesado: "interested",
+        negociacion: "negotiation",
+        propuesta: "proposal",
+        contactado: "contacted",
+      },
+      tasks: {
+        send: "Send follow-up to Roberto V. (3 days without response)",
+        confirm: "Confirm appointment with Maria G. — Thursday 2pm",
+        update: "Update price in catalog — photography service",
+      },
+
       popover: {
         title: "Sales Pipeline",
         leadsActive: "Active leads",
@@ -872,7 +1035,6 @@ export const landingContent = {
   // -------------------------------------------------------------------------------------
   es: {
     nav: { architecture: "Arquitectura", pricing: "Precios" },
-    operation: {title: "Tu operación completa, visible en tiempo real"},
     hero: {
       eyebrow: "Asistente de Ventas IA",
       h1: "Deja de perseguir leads. Agenda reuniones calificadas 24/7.",
@@ -1188,6 +1350,107 @@ export const landingContent = {
         "Configura y olvida"
       ]
     },
+    /*    pricing: {
+         title: "Inversión Diseñada para ROI",
+         subtitle: "Paga por Rendimiento · Tres Niveles para Diferentes Etapas de Crecimiento",
+         eyebrow: "PRECIOS",
+         tiers: [
+           {
+             name: "Foundation",
+             tag: "NIVEL 1",
+             price: "$697",
+             dolar: "",
+             period: "/mes",
+             setupFee: "+ $2,970 pago único de setup",
+             setupAlt: "O $2,970 pago único de setup + 4.5% de ingresos generados por el AI",
+             promo: "Primer mes 50% de descuento",
+             description: "Ideal para: Medspas de una sola ubicación facturando $15K–50K/mes",
+             roiTarget: "ROI Objetivo: 3x en el Mes 1",
+             features: [
+               "Landing Page (Una Sola Página) en Next.js",
+               "Web Chat AI",
+               "Base de conocimiento — hasta 10 servicios",
+               "AI Sales Concierge (califica + agenda: Google Calendar, entrenado con tus PDFs/FAQs)",
+               "500 conversaciones/mes",
+               "Webhook → motor de automatización (captura → trigger → flujo)",
+               "CRM auto-sync (HubSpot / GoHighLevel / Salesforce / Airtable vía API — según tu plan — o nuestro CRM Open Source)",
+               "Nurturing básico: Email de confirmación",
+               "Monitoreo básico + 1 ajuste mensual de prompts/flows",
+               "Soporte SLA: 12–8 hrs",
+               "LLM: OpenAI o Gemini"
+             ],
+             cta: "Comenzar →",
+             highlight: false
+           },
+           {
+             name: "Pilot Gratuito",
+             tag: "INICIA PILOT GRATIS",
+             tagSub: "Solo en Marzo",
+             price: "$0",
+             dolar: "",
+             period: "",
+             setupFee: "",
+             setupAlt: "",
+             promo: "",
+             description: "1 semana de prueba en TU sitio web con TUS servicios. Sin riesgo.",
+             roiTarget: "",
+             urgency: "Solo disponible durante Marzo 2025",
+             features: [
+               "Web Chat AI",
+               "AI Sales Concierge (califica + agenda: Google Calendar, entrenado con tus PDFs/FAQs)",
+               "Base de conocimiento — hasta 2 servicios",
+               "50 conversaciones",
+               "Nurturing básico",
+               "Agendamiento de citas por email"
+             ],
+             cta: "Iniciar Pilot Gratis →",
+             highlight: true,
+             footerNote: "Sin tarjeta de crédito · Setup en 48 hrs · Tus datos, tu sitio"
+           },
+           {
+             name: "Scale Formula",
+             tag: "PRÓXIMAMENTE",
+             price: "",
+             dolar: "",
+             period: "",
+             setupFee: "",
+             setupAlt: "",
+             promo: "",
+             description: "Funciones avanzadas para múltiples ubicaciones. Precios anunciados Q2 2025.",
+             roiTarget: "",
+             features: [],
+             cta: "Unirme a la Lista de Espera →",
+             highlight: false,
+             comingSoon: true
+           }
+         ],
+         comparison: {
+           title: "Cómo Autonoma AI se compara con otras opciones",
+           text: "Para tener lo que hace Autonoma (calificar y agendar, disparar webhook a workflows, sincronizar CRM, enviar confirmaciones y alertar al owner), normalmente terminas armando un stack por piezas y conectándolo manualmente. Autonoma lo empaqueta como un sistema “set-and-forget”: AI Sales Concierge con alcance estrecho (califica + agenda) + automatización por webhook + sync con CRM + alertas al equipo.",
+           cta: "Ver desglose completo del stack",
+           modal: {
+             title: "Constrúyelo pieza por pieza... o despliega un sistema",
+             subtitle: "Deja de unir herramientas con parches. Autonoma captura, califica y agenda reuniones, y luego sincroniza todo automáticamente.",
+             footer: "Autonoma ejecuta el flujo completo “Webhook → CRM → Email → Alert” y te notifica solo cuando hay un lead listo para comprar.",
+   
+             tableHeaders: {
+               features: "Funcionalidades (lo que necesitas)",
+               replaces: "Reemplaza (piezas típicas)",
+               tools: "Otras herramientas (costo)",
+               autonoma: "Autonoma AI"
+             },
+             tableRows: [
+               { feat: "Asistente de Ventas IA (califica + agenda)", rep: "Chatbot genérico + desorden de prompts", cost: "Varía", auto: true },
+               { feat: "Conocimiento entrenado con tus docs (PDF/RAG)", rep: "Herramienta KB + configuración BD vectorial", cost: "Varía", auto: true },
+               { feat: "Webhook → automatización de flujos", rep: "Zapier/Make/n8n (Hazlo tú mismo)", cost: "Varía", auto: true },
+               { feat: "Sincronización automática CRM", rep: "Integraciones a medida / carga manual", cost: "Varía", auto: true },
+               { feat: "Automatización de email de confirmación", rep: "Herramienta de email + plantillas", cost: "Varía", auto: true },
+               { feat: "Alertas al dueño (Slack/Discord/Teams)", rep: "Configuración de notificaciones separada", cost: "Varía", auto: true },
+               { feat: "Funciona con HubSpot/GoHighLevel/Salesforce/Airtable", rep: "Múltiples conectores", cost: "Varía", auto: true },
+             ]
+           }
+         }
+       }, */
     pricing: {
       title: "Inversión Diseñada para ROI",
       subtitle: "Paga por Rendimiento · Tres Niveles para Diferentes Etapas de Crecimiento",
@@ -1246,6 +1509,54 @@ export const landingContent = {
           footerNote: "Sin tarjeta de crédito · Setup en 48 hrs · Tus datos, tu sitio"
         },
         {
+          name: "Performance",
+          tag: "MOST POPULAR",
+          tagSub: "NIVEL 2",
+          price: "$797",
+          dolar: "",
+          period: "/mes",
+          setupFee: "+ $3,470 pago único de setup",
+          setupAlt: "O $3,470 pago único de setup + 5.5% de ingresos generados por el AI",
+          promo: "",
+          description: "Todo lo incluido en Foundation + integración SMS",
+          roiTarget: "ROI Objetivo: 5x en el Mes 1",
+          features: [
+            "Integración SMS",
+            "Base de conocimiento — hasta 30 servicios (FAQs)",
+            "Conversaciones ilimitadas",
+            "Testing A/B de flujos conversacionales",
+            "Soporte prioritario (SLA 8–4 hrs)",
+            "Nurturing avanzado con CRM / Dashboard de Pipeline de Ventas",
+            "Reducción de no-shows (recordatorios automáticos)",
+            "Upselling de paquetes (AI identifica pacientes de alto valor)"
+          ],
+          cta: "Escalar Ahora →",
+          highlight: false,
+          footerNote: "Ideal para: Medspas en crecimiento listos para escalar ($50K–100K/mes)"
+        },
+        {
+          name: "Enterprise",
+          tag: "TIER 3",
+          price: "Precio Personalizado",
+          dolar: "",
+          period: "",
+          setupFee: "$4,970 setup + $997/mes + 6.5% de ingresos generados por el AI",
+          setupAlt: "",
+          promo: "",
+          description: "Todo lo incluido en Performance",
+          roiTarget: "ROI Objetivo: 10x en el Primer Trimestre",
+          features: [
+            "Gestión multi-ubicación",
+            "Branding white-label",
+            "Integraciones API personalizadas",
+            "Success manager dedicado",
+            "Revisiones trimestrales de negocio"
+          ],
+          cta: "Contactar Ventas →",
+          highlight: false,
+          footerNote: "Ideal para: Cadenas o franquicias de MedSpa ($100K+ mensual)"
+        },
+        {
           name: "Scale Formula",
           tag: "PRÓXIMAMENTE",
           price: "",
@@ -1270,7 +1581,6 @@ export const landingContent = {
           title: "Constrúyelo pieza por pieza... o despliega un sistema",
           subtitle: "Deja de unir herramientas con parches. Autonoma captura, califica y agenda reuniones, y luego sincroniza todo automáticamente.",
           footer: "Autonoma ejecuta el flujo completo “Webhook → CRM → Email → Alert” y te notifica solo cuando hay un lead listo para comprar.",
-
           tableHeaders: {
             features: "Funcionalidades (lo que necesitas)",
             replaces: "Reemplaza (piezas típicas)",
@@ -1284,7 +1594,7 @@ export const landingContent = {
             { feat: "Sincronización automática CRM", rep: "Integraciones a medida / carga manual", cost: "Varía", auto: true },
             { feat: "Automatización de email de confirmación", rep: "Herramienta de email + plantillas", cost: "Varía", auto: true },
             { feat: "Alertas al dueño (Slack/Discord/Teams)", rep: "Configuración de notificaciones separada", cost: "Varía", auto: true },
-            { feat: "Funciona con HubSpot/GoHighLevel/Salesforce/Airtable", rep: "Múltiples conectores", cost: "Varía", auto: true },
+            { feat: "Funciona con HubSpot/GoHighLevel/Salesforce/Airtable", rep: "Múltiples conectores", cost: "Varía", auto: true }
           ]
         }
       }
@@ -1559,7 +1869,21 @@ export const landingContent = {
         ai: { label: "Asistente IA", sublabel: "Califica + Agenda" },
         workflow: { label: "Workflow IA", sublabel: "n8n activado" },
         crm: { label: "CRM / Sales Pipeline", sublabel: "ACTIVO" },
+        operation: { title: "Tu operación completa, visible en tiempo real" },
+        panelTitle: { title: "Panel de control" },
+        headerDescription: { title: "Desde el primer mensaje hasta el pedido entregado — todo en un solo lugar." },
         alert: { label: "Alerta Dueño", sublabel: "¡Reunión agendada!" }
+      },
+      states: {
+        interesado: "interested",
+        negociacion: "negotiation",
+        propuesta: "proposal",
+        contactado: "contacted",
+      },
+      tasks: {
+        send: "Enviar follow-up a Roberto V. (3 días sin respuesta)",
+        confirm: "Confirmar cita con María G. — Jueves 2pm",
+        update: "Actualizar precio en catálogo — servicio fotografía",
       },
       popover: {
         title: "Sales Pipeline",

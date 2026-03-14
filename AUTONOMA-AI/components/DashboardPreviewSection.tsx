@@ -123,11 +123,11 @@ const MOCK_DATA = {
 
 const TAB_ICONS = [
   { id: "resumen", icon: LayoutDashboard },
-  { id: "bandeja", icon: MessageSquare },
+/*   { id: "bandeja", icon: MessageSquare }, */
   { id: "pipeline", icon: Zap },
-  { id: "pedidos", icon: ShoppingBag },
+/*   { id: "pedidos", icon: ShoppingBag },
   { id: "perdidos", icon: TrendingDown },
-  { id: "catalogo", icon: Package },
+  { id: "catalogo", icon: Package }, */
 ]
 
 const estadoBadge: Record<string, string> = {
@@ -144,6 +144,7 @@ const estadoBadge: Record<string, string> = {
 function TabResumen() {
   const { language } = useLanguage()
   const t = landingContent[language].dashboardPreview
+  const task = landingContent[language].workflowVisual
   const d = MOCK_DATA
   const progressPct = Math.round((d.kpis.ingresos / d.kpis.meta) * 100)
   const sparkBars = [30, 45, 35, 60, 50, 70, 80]
@@ -152,16 +153,19 @@ function TabResumen() {
     <div className="space-y-6">
       {/* KPI grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
         <div className="bg-[#1A1A1E] rounded-xl p-4 border border-[#27272A]">
           <p className="text-xs text-[#A1A1AA] mb-1">{t.kpis.leadsToday}</p>
           <p className="text-2xl font-bold text-[#FAFAFA]">{d.kpis.leadsHoy}</p>
           <span className="text-xs text-[#00D084]">{t.kpis.improvedOverYesterday}</span>
         </div>
+
         <div className="bg-[#1A1A1E] rounded-xl p-4 border border-[#27272A]">
           <p className="text-xs text-[#A1A1AA] mb-1">{t.kpis.inPipeline}</p>
           <p className="text-2xl font-bold text-[#FAFAFA]">{d.kpis.pipeline}</p>
           <span className="text-xs text-[#A1A1AA]">${d.kpis.pipelineValue.toLocaleString()} {t.kpis.inDeals}</span>
         </div>
+
         <div className="bg-[#1A1A1E] rounded-xl p-4 border border-[#27272A]">
           <p className="text-xs text-[#A1A1AA] mb-1">{t.kpis.closeRate}</p>
           <p className="text-2xl font-bold text-[#FAFAFA]">{d.kpis.tasaCierre}%</p>
@@ -171,6 +175,7 @@ function TabResumen() {
             ))}
           </div>
         </div>
+
         <div className="bg-[#1A1A1E] rounded-xl p-4 border border-[#27272A]">
           <p className="text-xs text-[#A1A1AA] mb-1">{t.kpis.monthlyRevenue}</p>
           <p className="text-2xl font-bold text-[#FAFAFA]">${d.kpis.ingresos.toLocaleString()}</p>
@@ -214,12 +219,24 @@ function TabResumen() {
       <div className="bg-[#1A1A1E] rounded-xl border border-[#27272A] p-4">
         <p className="text-sm font-semibold text-[#FAFAFA] mb-3">{t.tasks.title}</p>
         <div className="space-y-2">
-          {d.tasks.map((task, i) => (
+          {/* {d.tasks.map((task, i) => (
             <div key={i} className="flex items-start gap-2 text-sm text-[#A1A1AA]">
               <Square className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#27272A]" />
               {task}
             </div>
-          ))}
+          ))} */}
+          <div className="flex items-start gap-2 text-sm text-[#A1A1AA]">
+            <Square className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#27272A]" />
+            {task.tasks.confirm}
+          </div>
+          <div className="flex items-start gap-2 text-sm text-[#A1A1AA]">
+            <Square className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#27272A]" />
+            {task.tasks.send}
+          </div>
+          <div className="flex items-start gap-2 text-sm text-[#A1A1AA]">
+            <Square className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#27272A]" />
+            {task.tasks.update}
+          </div>
         </div>
       </div>
     </div>
@@ -234,7 +251,7 @@ function TabBandeja() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-0 rounded-xl border border-[#27272A] overflow-hidden bg-[#1A1A1E]" style={{ minHeight: 420 }}>
-      {/* Left: list */}
+      
       <div className="border-r border-[#27272A]">
         {convs.map((c, i) => (
           <button
@@ -258,7 +275,7 @@ function TabBandeja() {
         ))}
       </div>
 
-      {/* Right: chat */}
+      
       <div className="flex flex-col">
         <div className="flex items-center gap-2 px-4 py-3 border-b border-[#27272A]">
           <p className="text-sm font-semibold text-[#FAFAFA]">{convs[active].name}</p>
@@ -299,6 +316,8 @@ function TabBandeja() {
 
 function TabPipeline() {
   const cols = MOCK_DATA.kanban
+  const { language } = useLanguage()
+  const t = landingContent[language].dashboardPreview
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 overflow-x-auto">
@@ -525,21 +544,21 @@ export function DashboardPreviewSection() {
   const [activeTab, setActiveTab] = useState("resumen")
   const { language } = useLanguage()
   const t = landingContent[language].workflowVisual
+  const tabs = landingContent[language].dashboardPreview
 
   const tabContent: Record<string, React.ReactNode> = {
     resumen: <TabResumen />,
-    bandeja: <TabBandeja />,
+    /* bandeja: <TabBandeja />, */
     pipeline: <TabPipeline />,
-    pedidos: <TabPedidos />,
+/*     pedidos: <TabPedidos />,
     perdidos: <TabPerdidos />,
-    catalogo: <TabCatalogo />,
+    catalogo: <TabCatalogo />, */
   }
 
   return (
     <section id="crm-pipeline" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
 
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -548,7 +567,8 @@ export function DashboardPreviewSection() {
           className="flex items-center gap-2 mb-4"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#00D084]" />
-          <span className="text-xs font-medium text-[#00D084] uppercase tracking-widest">{t.panelTitle}</span>
+          <span className="text-xs font-medium text-[#00D084] uppercase tracking-widest">
+            {t.nodes.panelTitle.title}</span>
         </motion.div>
 
         <motion.h2
@@ -558,7 +578,8 @@ export function DashboardPreviewSection() {
           transition={{ duration: 0.4, delay: 0.1 }}
           className="text-3xl md:text-4xl font-bold text-[#FAFAFA] mb-3 text-balance"
         >
-          {}{/* TODO: audio  7 */}
+          {t.nodes.operation.title}
+
         </motion.h2>
 
         <motion.p
@@ -568,7 +589,7 @@ export function DashboardPreviewSection() {
           transition={{ duration: 0.4, delay: 0.2 }}
           className="text-[#A1A1AA] text-lg mb-10 max-w-2xl"
         >
-          {t.headerDescription}
+          {t.nodes.headerDescription.title}
         </motion.p>
 
         {/* Tab container */}
@@ -579,23 +600,23 @@ export function DashboardPreviewSection() {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="bg-[#0A0A0B] rounded-2xl border border-[#27272A] overflow-hidden"
         >
-          {/* Tab bar */}
+          {/*  Tab bar */}
           <div className="flex overflow-x-auto border-b border-[#27272A] bg-[#111113]">
             {TAB_ICONS.map((tab) => {
               const isActive = activeTab === tab.id
-              /* const translatedTab = t.tabs.find((tt) => tt.id === tab.id) */
-              /* const label = translatedTab?.label ?? tab.id */
+              const translatedTab = tabs.tabs.find((tt) => tt.id === tab.id)
+              const label = translatedTab?.label ?? tab.id
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-2 px-5 py-3.5 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 border-b-2 ${isActive
-                      ? "bg-[#1A1A1E] text-[#FAFAFA] border-[#00D084]"
-                      : "text-[#A1A1AA] border-transparent hover:text-[#FAFAFA]"
+                    ? "bg-[#1A1A1E] text-[#FAFAFA] border-[#00D084]"
+                    : "text-[#A1A1AA] border-transparent hover:text-[#FAFAFA]"
                     }`}
                 >
                   <tab.icon className="w-4 h-4" />
-                  {/* {label} */}
+                  {label}
                 </button>
               )
             })}
