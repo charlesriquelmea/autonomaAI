@@ -517,22 +517,22 @@ export const landingContent = {
           highlight: false,
           footerNote: "Ideal for: MedSpa chains or franchises ($100K+ monthly)"
         },
-/*         {
-          name: "Scale Formula",
-          tag: "COMING SOON",
-          price: "",
-          dolar: "",
-          period: "",
-          setupFee: "",
-          setupAlt: "",
-          promo: "",
-          description: "Advanced features for multiple locations. Pricing announced Q2 2025.",
-          roiTarget: "",
-          features: [],
-          cta: "Join the Waitlist →",
-          highlight: false,
-          comingSoon: true
-        } */
+        /*         {
+                  name: "Scale Formula",
+                  tag: "COMING SOON",
+                  price: "",
+                  dolar: "",
+                  period: "",
+                  setupFee: "",
+                  setupAlt: "",
+                  promo: "",
+                  description: "Advanced features for multiple locations. Pricing announced Q2 2025.",
+                  roiTarget: "",
+                  features: [],
+                  cta: "Join the Waitlist →",
+                  highlight: false,
+                  comingSoon: true
+                } */
       ],
       comparison: {
         title: "How Autonoma AI compares with other options",
@@ -1027,6 +1027,54 @@ export const landingContent = {
       scoreLabel: "AI Score",
       chatStatus: "Chatting",
       scorePlaceholder: "—",
+    },
+    value: {
+      headerTagline: "THE COMPLETE SOLUTION",
+      headerTitle: "Everything You Get for Less Than the Cost of One Employee",
+      headerDescription: "A complete AI-powered sales and customer service system...",
+      realValueLabel: "Real Value",
+      combinedValueLabel: "Combined Value",
+      combinedValueAmount: "$4,800/month",
+      combinedValueDescription: "in premium features and services",
+      offerLabel: "TODAY'S OFFER",
+      setupFeeLabel: "Setup Fee",
+      setupFeeAmount: "$1,497",
+      monthlyLabel: "Monthly",
+      monthlyAmount: "$497/mo",
+      where: "in premium features and services",
+      initialTotalText: "Initial Total",
+      initialTotalAmount: "$1,994 USD",
+      launchDescription: "Launch your AI sales and support system...",
+      ctaButton: "Book a Demo",
+      ctaDescription: "See how your AI agent can start working...",
+      valueItems: [
+        {
+          icon: "Users",
+          title: "Virtual Secretary 24/7",
+          realValue: "$4,000/month",
+          description: "Answers customers instantly, follows up automatically, handles FAQs, and supports your business day and night."
+        },
+        {
+          icon: "BarChart3",
+          title: "CRM + Management Dashboard",
+          realValue: "$200/month",
+          description: "Manage leads, track conversations, monitor performance, and keep your business organized in one place."
+        },
+        {
+          icon: "Zap",
+          title: "AI Appointment Setter",
+          realValue: "$300/month",
+          description: "Qualifies leads, books appointments, sends reminders, and helps reduce missed opportunities."
+        },
+        {
+          icon: "BarChart3",
+          title: "Sales Pipeline + Calendar + Unified Inbox",
+          realValue: "$300/month",
+          description: "Track every opportunity, manage appointments visually, and centralize all conversations in one inbox for faster follow-up."
+        }
+      ],
+      trustPoints: ["No extra payroll", "No missed leads", "No 24/7 staffing costs",
+        "Works even while you sleep"]
     }
   },
 
@@ -2069,6 +2117,58 @@ export const landingContent = {
       scoreLabel: "Score AI",
       chatStatus: "Chatting",
       scorePlaceholder: "—",
+    },
+    value: {
+      headerTagline: "LA SOLUCIÓN COMPLETA",
+      headerTitle: "Todo lo que obtienes por menos del costo de un empleado",
+      headerDescription: "Un sistema completo de ventas y atención al cliente impulsado por IA, diseñado para ayudar a tu negocio a responder más rápido, agendar más citas, organizar tu pipeline y operar 24/7.",
+      realValueLabel: "Valor Real",
+      combinedValueLabel: "Valor Combinado",
+      combinedValueAmount: "$4,800/mes",
+      combinedValueDescription: "en funciones y servicios premium",
+      offerLabel: "OFERTA DE HOY",
+      setupFeeLabel: "Tarifa de Configuración",
+      setupFeeAmount: "$1,497",
+      monthlyLabel: "Mensual",
+      monthlyAmount: "$497/mes",
+      initialTotalText: "Total Inicial",
+      initialTotalAmount: "$1,994 USD",
+      launchDescription: "Lanza tu sistema de ventas y soporte con IA por una fracción del costo de contratar y capacitar personal.",
+      ctaButton: "Reservar una Demo",
+      where: "en funciones y servicios premium",
+      ctaDescription: "Descubre cómo tu agente de IA puede empezar a trabajar para tu negocio en días, no meses.",
+      valueItems: [
+        {
+          icon: "Users",
+          title: "Secretario Virtual 24/7",
+          realValue: "$4,000/mes",
+          description: "Responde a los clientes al instante, hace seguimiento automático, maneja preguntas frecuentes y apoya tu negocio día y noche."
+        },
+        {
+          icon: "BarChart3",
+          title: "CRM + Panel de Gestión",
+          realValue: "$200/mes",
+          description: "Gestiona prospectos, rastrea conversaciones, monitorea el rendimiento y mantiene tu negocio organizado en un solo lugar."
+        },
+        {
+          icon: "Zap",
+          title: "Agente de Citas con IA",
+          realValue: "$300/mes",
+          description: "Califica prospectos, agenda citas, envía recordatorios y ayuda a reducir oportunidades perdidas."
+        },
+        {
+          icon: "BarChart3",
+          title: "Pipeline de Ventas + Calendario + Bandeja Unificada",
+          realValue: "$300/mes",
+          description: "Rastrea cada oportunidad, gestiona citas de forma visual y centraliza todas las conversaciones en una sola bandeja para un seguimiento más rápido."
+        }
+      ],
+      trustPoints: [
+        "Sin nómina adicional",
+        "Sin prospectos perdidos",
+        "Sin costos de personal 24/7",
+        "Funciona incluso mientras duermes"
+      ]
     }
-  },
+  }
 }

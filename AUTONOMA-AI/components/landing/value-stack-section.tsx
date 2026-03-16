@@ -3,11 +3,13 @@
 import { motion } from "framer-motion"
 import { CheckCircle2, Zap, Users, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "../language-provider";
+import { landingContent } from "@/data/landing-content";
 
 interface ValueStackSectionProps {
   onOpenForm?: () => void;
 }
-
+/* 
 const valueItems = [
   {
     icon: Users,
@@ -40,9 +42,18 @@ const trustPoints = [
   "No missed leads",
   "No 24/7 staffing costs",
   "Works even while you sleep"
-]
+] */
+
+const iconMap: Record<string, React.ElementType> = {
+  Users,
+  BarChart3,
+  Zap,
+}
 
 export function ValueStackSection({ onOpenForm }: ValueStackSectionProps) {
+  const { language } = useLanguage()
+  const t = landingContent[language].value
+
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Gradient background */}
@@ -60,20 +71,20 @@ export function ValueStackSection({ onOpenForm }: ValueStackSectionProps) {
           className="text-center mb-16"
         >
           <p className="text-xs uppercase tracking-widest text-[#00D084] font-semibold mb-4">
-            THE COMPLETE SOLUTION
+            {t.headerTagline}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-balance mb-6">
-            Everything You Get for Less Than the Cost of One Employee
+            {t.headerTitle}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-            A complete AI-powered sales and customer service system designed to help your business respond faster, book more appointments, organize your pipeline, and operate 24/7.
+            {t.headerDescription}
           </p>
         </motion.div>
 
         {/* Value Stack Cards */}
         <div className="space-y-4 mb-12">
-          {valueItems.map((item, index) => {
-            const Icon = item.icon
+          {t.valueItems.map((item, index) => {
+            const Icon = iconMap[item.icon] || Users
             return (
               <motion.div
                 key={index}
@@ -109,7 +120,7 @@ export function ValueStackSection({ onOpenForm }: ValueStackSectionProps) {
                   {/* Right side - Value */}
                   <div className="flex-shrink-0 text-right">
                     <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">
-                      Real Value
+                      {t.realValueLabel}
                     </p>
                     <p className="text-2xl md:text-3xl font-bold text-[#00D084]">
                       {item.realValue}
@@ -131,12 +142,12 @@ export function ValueStackSection({ onOpenForm }: ValueStackSectionProps) {
         >
           <div className="text-center">
             <p className="text-sm uppercase tracking-widest text-[#00D084] font-semibold mb-2">
-              Combined Value
+              {t.combinedValueLabel}
             </p>
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-2">
-              $4,800<span className="text-2xl text-gray-400">/month</span>
+              {t.combinedValueAmount}<span className="text-2xl text-gray-400">{t.month}</span>
             </h3>
-            <p className="text-gray-400">in premium features and services</p>
+            <p className="text-gray-400">{t.where}</p>
           </div>
         </motion.div>
 
@@ -151,32 +162,32 @@ export function ValueStackSection({ onOpenForm }: ValueStackSectionProps) {
           <div className="text-center space-y-6">
             <div>
               <p className="text-sm uppercase tracking-widest text-[#A1A1AA] font-semibold mb-4">
-                TODAY'S OFFER
+                {t.offerLabel}
               </p>
               <div className="space-y-3 mb-6">
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Setup Fee</p>
-                  <p className="text-4xl md:text-5xl font-bold text-white">$1,497</p>
+                  <p className="text-xs text-gray-500 mb-1">{t.setupFeeLabel}</p>
+                  <p className="text-4xl md:text-5xl font-bold text-white">{t.setupFeeAmount}</p>
                 </div>
                 <p className="text-gray-400">+</p>
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Monthly</p>
-                  <p className="text-4xl md:text-5xl font-bold text-white">$497<span className="text-xl text-gray-400">/mo</span></p>
+                  <p className="text-xs text-gray-500 mb-1">{t.monthlyLabel}</p>
+                  <p className="text-4xl md:text-5xl font-bold text-white">{t.monthlyAmount}</p>
                 </div>
               </div>
               <p className="text-sm text-[#A1A1AA] mb-6">
-                Initial Total <span className="text-white font-semibold">$1,994 USD</span>
+                {t.initialTotalText} <span className="text-white font-semibold">{t.initialTotalAmount}</span>
               </p>
             </div>
 
             <div className="pt-6 border-t border-white/10">
               <p className="text-gray-400 mb-6 text-balance">
-                Launch your AI sales and support system for a fraction of the cost of hiring and training staff.
+                {t.launchDescription}
               </p>
-              
+
               {/* Trust Points */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-                {trustPoints.map((point, idx) => (
+                {t.trustPoints.map((point, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                     <CheckCircle2 className="w-4 h-4 text-[#00D084] flex-shrink-0" />
                     <span>{point}</span>
@@ -189,11 +200,11 @@ export function ValueStackSection({ onOpenForm }: ValueStackSectionProps) {
                 onClick={onOpenForm}
                 className="bg-[#00D084] hover:bg-[#00D084]/90 text-black font-bold text-lg px-8 py-6 h-auto rounded-xl border-0 mb-4 w-full md:w-auto"
               >
-                Book a Demo
+                {t.ctaButton}
               </Button>
 
               <p className="text-sm text-gray-500">
-                See how your AI agent can start working for your business in days, not months.
+                {t.ctaDescription}
               </p>
             </div>
           </div>
