@@ -46,7 +46,7 @@ export function MonthlyRetainer({ onOpenForm }: MonthlyRetainerProps) {
 
   return (
     <section id="retainer" className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-cyan-950/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -74,7 +74,7 @@ export function MonthlyRetainer({ onOpenForm }: MonthlyRetainerProps) {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-6 rounded-2xl bg-gradient-to-r from-white/5 to-transparent border border-white/10 hover:border-cyan-500/30 transition-all flex flex-col"
+                className="p-6 rounded-2xl bg-linear-to-r from-white/5 to-transparent border border-white/10 hover:border-cyan-500/30 transition-all flex flex-col"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
@@ -85,7 +85,7 @@ export function MonthlyRetainer({ onOpenForm }: MonthlyRetainerProps) {
                   </div>
                 </div>
 
-                <div className="space-y-4 pl-0 md:pl-16 flex-grow">
+                <div className="space-y-4 pl-0 md:pl-16 grow">
                   {category.items.map((item: any, itemIdx: number) => (
                     <div
                       key={itemIdx}
@@ -107,7 +107,7 @@ export function MonthlyRetainer({ onOpenForm }: MonthlyRetainerProps) {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => setIsSlaOpen(true)}
-                            className="mt-4 flex items-center gap-2 text-xs font-bold text-white bg-gradient-to-r from-cyan-600/20 to-cyan-900/20 border border-cyan-500/40 px-4 py-2 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/30 transition-all shadow-[0_0_15px_-5px_rgba(6,182,212,0.1)] hover:shadow-[0_0_20px_-5px_rgba(6,182,212,0.4)] group w-fit"
+                            className="mt-4 flex items-center gap-2 text-xs font-bold text-white bg-linear-to-r from-cyan-600/20 to-cyan-900/20 border border-cyan-500/40 px-4 py-2 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/30 transition-all shadow-[0_0_15px_-5px_rgba(6,182,212,0.1)] hover:shadow-[0_0_20px_-5px_rgba(6,182,212,0.4)] group w-fit"
                           >
                             <Shield className="w-3.5 h-3.5 text-cyan-400 group-hover:text-cyan-200 transition-colors" />
                             <span className="tracking-wide">See more SLA support...</span>
@@ -128,7 +128,7 @@ export function MonthlyRetainer({ onOpenForm }: MonthlyRetainerProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 mb-12"
+          className="p-8 rounded-2xl bg-linear-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 mb-12"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-5xl mx-auto">
             <div className="w-full md:w-1/2 space-y-3 text-left">
@@ -144,7 +144,7 @@ export function MonthlyRetainer({ onOpenForm }: MonthlyRetainerProps) {
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-right">
-              <div className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              <div className="text-6xl md:text-7xl font-bold bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
                 {t.summary.priceLine1}<span className="text-2xl">{t.perMonthLong}</span> <br />
                 <span className="text-2xl">{t.summary.priceLine2}</span>
               </div>

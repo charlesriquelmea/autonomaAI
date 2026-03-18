@@ -47,7 +47,7 @@ export function ProvenResultsSection({ onOpenForm }: CTASectionProps) {
       <div className="container mx-auto px-4 md:px-6">
         
         {/* 1. HERO SECTION */}
-        <div className="text-center mb-24 max-w-4xl mx-auto flex flex-col items-center">
+        {/* <div className="text-center mb-24 max-w-4xl mx-auto flex flex-col items-center">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -89,7 +89,7 @@ export function ProvenResultsSection({ onOpenForm }: CTASectionProps) {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </motion.div>
-        </div>
+        </div> */}
 
         {/* LIVE DEMO SHOWCASE (Cambio 4b) */}
         <div className="mb-24" id="live-demo">

@@ -44,13 +44,13 @@ export default function HomePage() {
         <VanguardTechnology />
         <ComparisonSection />
         <ProvenResultsSection onOpenForm={openForm} />
-        <DashboardPreviewSection />
+        {/* <DashboardPreviewSection /> */}
         
         {/* New B2B Spanish Sections */}
-        <CRMSection />
+        {/* <CRMSection />
         <AgentTiersSection />
         <SchedulerSection />
-        <InboxSection />
+        <InboxSection /> */}
         
         {/* <WhatYouGetSection /> */}
         {/* <SocialProofSection /> */}
