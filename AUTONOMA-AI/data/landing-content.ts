@@ -22,6 +22,77 @@ export const landingContent = {
         "Safe fallback: routes to team if in doubt"
       ]
     },
+    agentTiersSection: {
+      eyebrow: "Choose your level of automation",
+      title: "The right agent for every stage of your business",
+      subtitle: "From your first automation to high-volume enterprise operations.",
+      popu: "Most Popular",
+      plan: "Plan",
+      tiers: [
+        {
+          index: 1,
+          name: "FAQ Assistant",
+          tagline: "Capture leads 24/7 without human intervention",
+          badge: "Ideal for landing pages",
+          features: [
+            "Automatically answers frequently asked questions",
+            "Captures prospect's name, email, and phone",
+            "1 active channel: webchat",
+            "Knowledge base of up to 30 questions",
+            "Team notification for each new lead",
+          ],
+          cta: "Start here",
+          highlight: false,
+        },
+        {
+          index: 2,
+          name: "Sales Agent + CRM",
+          tagline: "Qualify, negotiate, and schedule without an SDR",
+          badge: "For active sales teams",
+          features: [
+            "Smart lead qualification by profile",
+            "Fully automated email follow-up",
+            "Schedules meetings in real time from chat",
+            "CRM with active pipeline included in the plan",
+            "Broad and customizable knowledge base",
+            "Adapts tone and responses according to the prospect",
+          ],
+          cta: "See demo",
+          highlight: true,
+        },
+        {
+          index: 3,
+          name: "Multi-channel AI Executive",
+          tagline: "An agent that remembers everything, no matter the channel",
+          badge: "For businesses with high demand",
+          features: [
+            "WhatsApp + Webchat + Instagram + Discord simultaneously",
+            "Unified context across all channels",
+            "Lead can switch channels without losing the thread",
+            "Multi-channel CRM consolidated in a single view",
+            "Performance reports by channel",
+          ],
+          cta: "Get a quote",
+          highlight: false,
+        },
+        {
+          index: 4,
+          name: "Custom Enterprise",
+          tagline: "Integrated into your operation from day one",
+          badge: "For complex operations",
+          features: [
+            "Integration with your existing ERP or CRM",
+            "Catalogs of 500+ products with smart search",
+            "Multi-language: Spanish, English, and Portuguese",
+            "Tailor-made conversation flows",
+            "Custom reports and dashboards",
+            "Dedicated support with service level agreement",
+          ],
+          cta: "Talk to sales",
+          highlight: false,
+        },
+      ]
+    },
     inboxSection: {
       conversations: [
         {
@@ -1250,6 +1321,77 @@ export const landingContent = {
         "Implementación en 10 días hábiles",
         "Fallback seguro: deriva al equipo si duda"
       ],
+    },
+    agentTiersSection: {
+      eyebrow: "Elige tu nivel de automatización",
+      title: "El agente correcto para cada etapa de tu negocio",
+      subtitle: "Desde tu primera automatización hasta operaciones enterprise de alto volumen.",
+      popu: "Más Popular",
+      plan: "Plan",
+      tiers: [
+        {
+          index: 1,
+          name: "Asistente FAQ",
+          tagline: "Captura leads 24/7 sin intervención humana",
+          badge: "Ideal para landing pages",
+          features: [
+            "Responde preguntas frecuentes automáticamente",
+            "Captura nombre, email y teléfono del prospecto",
+            "1 canal activo: webchat",
+            "Base de conocimiento de hasta 30 preguntas",
+            "Notificación al equipo por cada lead nuevo",
+          ],
+          cta: "Empezar aquí",
+          highlight: false,
+        },
+        {
+          index: 2,
+          name: "Agente de Ventas + CRM",
+          tagline: "Califica, negocia y agenda sin un SDR",
+          badge: "Para equipos de ventas activos",
+          features: [
+            "Calificación inteligente de leads por perfil",
+            "Seguimiento por email completamente automatizado",
+            "Agenda reuniones en tiempo real desde el chat",
+            "CRM con pipeline activo incluido en el plan",
+            "Base de conocimiento amplia y personalizable",
+            "Adapta el tono y las respuestas según el prospecto",
+          ],
+          cta: "Ver demo",
+          highlight: true,
+        },
+        {
+          index: 3,
+          name: "Ejecutivo IA Multi-canal",
+          tagline: "Un agente que recuerda todo, sin importar el canal",
+          badge: "Para negocios con alta demanda",
+          features: [
+            "WhatsApp + Webchat + Instagram + Discord simultáneos",
+            "Contexto unificado entre todos los canales",
+            "El lead puede cambiar de canal sin perder el hilo",
+            "CRM multi-canal consolidado en una sola vista",
+            "Reportes de rendimiento por canal",
+          ],
+          cta: "Cotizar",
+          highlight: false,
+        },
+        {
+          index: 4,
+          name: "Enterprise Personalizado",
+          tagline: "Integrado a tu operación desde el día uno",
+          badge: "Para operaciones complejas",
+          features: [
+            "Integración con tu ERP o CRM existente",
+            "Catálogos de 500+ productos con búsqueda inteligente",
+            "Multi-idioma: español, inglés y portugués",
+            "Flujos de conversación diseñados a medida",
+            "Reportes y dashboards personalizados",
+            "Soporte dedicado con acuerdo de nivel de servicio",
+          ],
+          cta: "Hablar con ventas",
+          highlight: false,
+        },
+      ]
     },
     inboxSection: {
       conversations: [
