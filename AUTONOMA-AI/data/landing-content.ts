@@ -1,4 +1,5 @@
-import { BarChart3, Bell, CalendarCheck, FileDown, LayoutDashboard, MessageSquare, ShieldCheck, UserCheck, Users } from "lucide-react";
+import { BarChart3, Bell, CalendarCheck, Download, FileDown, Filter, Layers, LayoutDashboard, MessageSquare, ScrollText, Search, ShieldCheck, UserCheck, UserPlus, Users } from "lucide-react";
+import { features } from "process";
 
 export const landingContent = {
   // -------------------------------------------------------------------------------------
@@ -21,6 +22,93 @@ export const landingContent = {
         "Safe fallback: routes to team if in doubt"
       ]
     },
+    inboxSection: {
+      conversations: [
+        {
+          name: "Carlos Mendoza",
+          channel: "WhatsApp",
+          status: "Qualified",
+          statusColor: "bg-green-500",
+          message: "Yes, I'm interested in the Pro plan. When can we talk?",
+          time: "2 min ago",
+          avatar: "CM",
+        },
+        {
+          name: "Ana Torres",
+          channel: "Webchat",
+          status: "In progress",
+          statusColor: "bg-yellow-500",
+          message: "Does the agent work with my online store?",
+          time: "15 min ago",
+          avatar: "AT",
+        },
+        {
+          name: "Roberto Silva",
+          channel: "Instagram",
+          status: "New",
+          statusColor: "bg-blue-500",
+          message: "Hi, I saw your post and wanted more info",
+          time: "1h ago",
+          avatar: "RS",
+        },
+        {
+          name: "Daniela Reyes",
+          channel: "WhatsApp",
+          status: "Follow-up",
+          statusColor: "bg-orange-500",
+          message: "Sorry, I forgot to reply...",
+          time: "3h ago",
+          avatar: "DR",
+        },
+        {
+          name: "Miguel Vargas",
+          channel: "Webchat",
+          status: "Closed",
+          statusColor: "bg-gray-500",
+          message: "Perfect, we'll leave it like that then.",
+          time: "yesterday",
+          avatar: "MV",
+        },
+      ],
+      features: [
+        {
+          icon: Layers,
+          label: "Unified View",
+          description: "All channels in a single inbox. No switching apps.",
+        },
+        {
+          icon: Filter,
+          label: "Status Filters",
+          description: "New, in progress, qualified, closed. Focus where it matters.",
+        },
+        {
+          icon: UserPlus,
+          label: "Lead Assignment",
+          description: "Distribute prospects among your team in seconds from the same view.",
+        },
+        {
+          icon: ScrollText,
+          label: "Complete History",
+          description: "Every message, every reply, in chronological and immutable order.",
+        },
+        {
+          icon: Search,
+          label: "Powerful Search",
+          description: "Find any lead by name, company, or conversation text.",
+        },
+        {
+          icon: Download,
+          label: "Direct Export",
+          description: "Download full conversations for auditing or agent training.",
+        },
+      ],
+      eyebrow: "Smart Inbox",
+      title: "All conversations. One single place.",
+      subtitle: "No open tabs, no leads lost in WhatsApp. Your team focused on closing.",
+      inbox: "Inbox",
+      conver: "5 active conversations",
+    },
+
     crmSection: {
       features: [
         {
@@ -74,6 +162,7 @@ export const landingContent = {
       title: "Your sales team, finally organized",
       subtitle: "Each agent comes with a dedicated CRM so you never lose a qualified lead."
     },
+
     provenResults: {
       header: {
         badge: "LIVE DEMO — REAL CLIENT",
@@ -1161,6 +1250,92 @@ export const landingContent = {
         "Implementación en 10 días hábiles",
         "Fallback seguro: deriva al equipo si duda"
       ],
+    },
+    inboxSection: {
+      conversations: [
+        {
+          name: "Carlos Mendoza",
+          channel: "WhatsApp",
+          status: "Calificado",
+          statusColor: "bg-green-500",
+          message: "Sí, me interesa el plan Pro. ¿Cuándo podemos hablar?",
+          time: "hace 2 min",
+          avatar: "CM",
+        },
+        {
+          name: "Ana Torres",
+          channel: "Webchat",
+          status: "En progreso",
+          statusColor: "bg-yellow-500",
+          message: "¿El agente funciona con mi tienda en línea?",
+          time: "hace 15 min",
+          avatar: "AT",
+        },
+        {
+          name: "Roberto Silva",
+          channel: "Instagram",
+          status: "Nuevo",
+          statusColor: "bg-blue-500",
+          message: "Hola, vi su publicación y quería más info",
+          time: "hace 1h",
+          avatar: "RS",
+        },
+        {
+          name: "Daniela Reyes",
+          channel: "WhatsApp",
+          status: "Seguimiento",
+          statusColor: "bg-orange-500",
+          message: "Perdona, se me pasó responder...",
+          time: "hace 3h",
+          avatar: "DR",
+        },
+        {
+          name: "Miguel Vargas",
+          channel: "Webchat",
+          status: "Cerrado",
+          statusColor: "bg-gray-500",
+          message: "Perfecto, quedamos así entonces.",
+          time: "ayer",
+          avatar: "MV",
+        },
+      ],
+      features: [
+        {
+          icon: Layers,
+          label: "Vista Unificada",
+          description: "Todos los canales en una sola bandeja. Sin cambiar de app.",
+        },
+        {
+          icon: Filter,
+          label: "Filtros por Estado",
+          description: "Nuevo, en progreso, calificado, cerrado. Enfócate donde importa.",
+        },
+        {
+          icon: UserPlus,
+          label: "Asignación de Leads",
+          description: "Distribuye prospectos entre tu equipo en segundos desde la misma vista.",
+        },
+        {
+          icon: ScrollText,
+          label: "Historial Completo",
+          description: "Cada mensaje, cada respuesta, en orden cronológico e inmutable.",
+        },
+        {
+          icon: Search,
+          label: "Búsqueda Potente",
+          description: "Encuentra cualquier lead por nombre, empresa o texto de conversación.",
+        },
+        {
+          icon: Download,
+          label: "Exportación Directa",
+          description: "Descarga conversaciones completas para auditoría o entrenamiento del agente.",
+        },
+      ],
+      eyebrow: "Bandeja de entrada inteligente",
+      title: "Todas las conversaciones. Un solo lugar.",
+      subtitle: "Sin pestañas abiertas, sin leads perdidos en WhatsApp. Tu equipo enfocado en cerrar.",
+      inbox: "Inbox",
+      conver: "5 active conversations",
     },
     crmSection: {
       features: [
