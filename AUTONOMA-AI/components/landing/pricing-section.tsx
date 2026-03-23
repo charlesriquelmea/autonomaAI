@@ -50,190 +50,224 @@ export function PricingSection({ onOpenForm }: PricingSectionProps) {
         </div>
 
         {/* Pricing Cards */}
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2
           lg:grid-cols-4 w-full place-items-center">
-            {/* {t.tiers.map((tier: any, index: number) => { */}
-            {[...t.tiers]
-              .sort((a: any, b: any) => {
-                const order = [
-                  "Pilot Gratuito",
-                  "Foundation",
-                  "Performance",
-                  "Enterprise",
-                  "Scale Formula"
-                ]
+          {/* {t.tiers.map((tier: any, index: number) => { */}
+          {[...t.tiers]
+            .sort((a: any, b: any) => {
+              const order = [
+                "Pilot Gratuito",
+                "Foundation",
+                "Performance",
+                "Enterprise",
+                "Scale Formula"
+              ]
 
-                return order.indexOf(a.name) - order.indexOf(b.name)
-              })
-              .map((tier: any, index: number) => {
-                const isHighlight = tier.highlight
-                const isComingSoon = tier.comingSoon
+              return order.indexOf(a.name) - order.indexOf(b.name)
+            })
+            .map((tier: any, index: number) => {
+              const isHighlight = tier.highlight
+              const isComingSoon = tier.comingSoon
 
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`p-8 rounded-3xl border relative overflow-hidden flex flex-col h-full ${isHighlight
-                      ? "border-2 border-[#00D084] bg-[#111113] ring-1 ring-[#00D084]/20"
-                      : isComingSoon
-                        ? "border-white/10 bg-white/[0.02] opacity-70"
-                        : "border-white/10 bg-[#0A0A0B]"
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`p-8 rounded-3xl border relative overflow-hidden flex flex-col h-full ${isHighlight
+                    ? "border-2 border-[#00D084] bg-[#111113] ring-1 ring-[#00D084]/20"
+                    : isComingSoon
+                      ? "border-white/10 bg-white/[0.02] opacity-70"
+                      : "border-white/10 bg-[#0A0A0B]"
+                    }`}
+                >
+
+                  {/* Highlight badge */}
+                  {isHighlight && (
+                    <div className="absolute -top-px left-1/2 -translate-x-1/2">
+                      <div className="px-4 py-1 bg-[#00D084] text-black text-xs font-bold uppercase tracking-wider rounded-b-lg">
+                        {t.recommendedLabel}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Tag */}
+                  <div className="mb-4 mt-4">
+                    <span
+                      className={`text-xs font-mono uppercase tracking-wider font-bold ${isHighlight ? "text-[#00D084]" : "text-[#A1A1AA]"
+                        }`}
+                    >
+                      {tier.tag}
+                    </span>
+
+                    {tier.tagSub && (
+                      <span className="ml-2 text-xs bg-[#F59E0B]/20 text-[#F59E0B] border border-[#F59E0B]/30 px-2 py-0.5 rounded-full font-medium">
+                        {tier.tagSub}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {tier.name}
+                  </h3>
+
+                  {/* Promo */}
+                  {tier.promo && (
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00D084]/10 border border-[#00D084]/20 text-[#00D084] text-xs font-medium mb-3 self-start">
+                      {tier.promo}
+                    </div>
+                  )}
+
+                  {/* Urgency */}
+                  {tier.urgency && (
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EF4444]/10 border border-[#EF4444]/30 text-[#EF4444] text-xs font-medium mb-3 self-start">
+                      <Clock className="w-3 h-3" />
+                      {tier.urgency}
+                    </div>
+                  )}
+
+                  {/* Price */}
+                  <div
+                    className={`mb-4 pb-4 border-b ${isHighlight
+                      ? "border-[#00D084]/20"
+                      : "border-white/10"
                       }`}
                   >
 
-                    {/* Highlight badge */}
-                    {isHighlight && (
-                      <div className="absolute -top-px left-1/2 -translate-x-1/2">
-                        <div className="px-4 py-1 bg-[#00D084] text-black text-xs font-bold uppercase tracking-wider rounded-b-lg">
-                          {t.recommendedLabel}
+
+
+                    {tier.price !== "" ? (
+                      <>
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-4xl font-bold text-white">
+                            {tier.price}
+                          </span>
+
+                          <span className="text-muted-foreground">
+                            {tier.period}
+                          </span>
+
                         </div>
-                      </div>
-                    )}
 
-                    {/* Tag */}
-                    <div className="mb-4 mt-4">
-                      <span
-                        className={`text-xs font-mono uppercase tracking-wider font-bold ${isHighlight ? "text-[#00D084]" : "text-[#A1A1AA]"
-                          }`}
-                      >
-                        {tier.tag}
-                      </span>
-
-                      {tier.tagSub && (
-                        <span className="ml-2 text-xs bg-[#F59E0B]/20 text-[#F59E0B] border border-[#F59E0B]/30 px-2 py-0.5 rounded-full font-medium">
-                          {tier.tagSub}
-                        </span>
-                      )}
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {tier.name}
-                    </h3>
-
-                    {/* Promo */}
-                    {tier.promo && (
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00D084]/10 border border-[#00D084]/20 text-[#00D084] text-xs font-medium mb-3 self-start">
-                        {tier.promo}
-                      </div>
-                    )}
-
-                    {/* Urgency */}
-                    {tier.urgency && (
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EF4444]/10 border border-[#EF4444]/30 text-[#EF4444] text-xs font-medium mb-3 self-start">
-                        <Clock className="w-3 h-3" />
-                        {tier.urgency}
-                      </div>
-                    )}
-
-                    {/* Price */}
-                    <div
-                      className={`mb-4 pb-4 border-b ${isHighlight
-                        ? "border-[#00D084]/20"
-                        : "border-white/10"
-                        }`}
-                    >
-
-                      {tier.price !== "" ? (
-                        <>
-                          <div className="flex items-baseline gap-1">
-                            <span className="text-4xl font-bold text-white">
-                              {tier.price}
-                            </span>
-
-                            <span className="text-muted-foreground">
-                              {tier.period}
-                            </span>
+                        {/* Línea con "o" solo en el 4to elemento */}
+                        {index === 3 && (
+                          <div className="flex items-center gap-2 my-3">
+                            <div className="flex-1 h-px bg-white/10" />
+                            <span className="text-sm font-semibold text-[#A1A1AA]">o</span>
+                            <div className="flex-1 h-px bg-white/10" />
                           </div>
+                        )}
 
-                          {tier.setupFee && (
-                            <p className="text-xs text-[#A1A1AA] mt-1">
-                              {tier.setupFee}
-                            </p>
-                          )}
 
-                          {tier.setupAlt && (
-                            <p className="text-xs text-[#A1A1AA]/70 mt-0.5 italic">
-                              {tier.setupAlt}
-                            </p>
-                          )}
-                        </>
-                      ) : isComingSoon ? (
-                        <p className="text-lg font-semibold text-[#A1A1AA]">
-                          {t.pricingTba}
-                        </p>
-                      ) : null}
 
-                      {/* Description */}
-                      <p
-                        className={`text-sm mt-3 ${isHighlight
-                          ? "text-[#00D084]"
-                          : "text-muted-foreground"
-                          }`}
-                      >
-                        {tier.description}
+                        {tier.setupFee && (
+                          <p className="text-xs text-[#A1A1AA] mt-1">
+                            {tier.setupFee}
+                          </p>
+                        )}
+
+                        {index === 2 && (
+                          <div className="flex items-center gap-2 my-3">
+                            <div className="flex-1 h-px bg-white/10" />
+                            <span className="text-sm font-semibold text-[#A1A1AA]">o</span>
+                            <div className="flex-1 h-px bg-white/10" />
+                          </div>
+                        )}
+
+                        {index === 1 && (
+                          <div className="flex items-center gap-2 my-3">
+                            <div className="flex-1 h-px bg-white/10" />
+                            <span className="text-sm font-semibold text-[#A1A1AA]">o</span>
+                            <div className="flex-1 h-px bg-white/10" />
+                          </div>
+                        )}
+
+                        {tier.setupAlt && (
+                          <p className="text-xs text-[#A1A1AA]/70 mt-0.5 italic">
+                            {tier.setupAlt}
+                          </p>
+                        )}
+
+
+                      </>
+                    ) : isComingSoon ? (
+                      <p className="text-lg font-semibold text-[#A1A1AA]">
+                        {t.pricingTba}
                       </p>
+                    ) : null}
 
-                      {/* ROI badge */}
-                      {tier.roiTarget && (
-                        <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#00D084]/10 border border-[#00D084]/20 text-[#00D084] text-xs font-semibold mt-3">
-                          {tier.roiTarget}
-                        </div>
-                      )}
-                    </div>
 
-                    {/* Features */}
-                    <ul className="space-y-3 mb-8 flex-1">
-                      {tier.features.map((feature: string, idx: number) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-3 text-sm text-gray-200"
-                        >
-                          <Check
-                            className={`w-4 h-4 shrink-0 mt-0.5 ${isHighlight
-                              ? "text-[#00D084]"
-                              : "text-gray-500"
-                              }`}
-                          />
 
-                          <span>{feature} </span> {/* Aqui */}
-                        </li>
-                      ))}
-
-                      {isComingSoon && tier.features.length === 0 && (
-                        <li className="text-sm text-[#A1A1AA] italic">
-                          {t.comingSoonText}
-                        </li>
-                      )}
-                    </ul>
-
-                    {/* CTA */}
-                    <Button
-                      onClick={isComingSoon ? undefined : onOpenForm}
-                      variant={isHighlight ? "default" : "outline"}
-                      className={`w-full ${isHighlight
-                        ? "bg-[#00D084] hover:bg-[#00D084]/90 text-black font-bold border-0"
-                        : isComingSoon
-                          ? "border-white/10 hover:bg-white/10 text-[#A1A1AA]"
-                          : "border-white/10 hover:bg-white/10"
+                    {/* Description */}
+                    <p
+                      className={`text-sm mt-3 ${isHighlight
+                        ? "text-[#00D084]"
+                        : "text-muted-foreground"
                         }`}
                     >
-                      {tier.cta}
-                    </Button>
+                      {tier.description}
+                    </p>
 
-                    {/* Footer */}
-                    {tier.footerNote && (
-                      <p className="text-center text-xs text-[#A1A1AA] mt-3">
-                        {tier.footerNote}
-                      </p>
+                    {/* ROI badge */}
+                    {tier.roiTarget && (
+                      <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#00D084]/10 border border-[#00D084]/20 text-[#00D084] text-xs font-semibold mt-3">
+                        {tier.roiTarget}
+                      </div>
                     )}
+                  </div>
 
-                  </motion.div>
-                )
-              })}
-          </div>
+                  {/* Features */}
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {tier.features.map((feature: string, idx: number) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-3 text-sm text-gray-200"
+                      >
+                        <Check
+                          className={`w-4 h-4 shrink-0 mt-0.5 ${isHighlight
+                            ? "text-[#00D084]"
+                            : "text-gray-500"
+                            }`}
+                        />
+
+                        <span>{feature} </span> {/* Aqui */}
+                      </li>
+                    ))}
+
+                    {isComingSoon && tier.features.length === 0 && (
+                      <li className="text-sm text-[#A1A1AA] italic">
+                        {t.comingSoonText}
+                      </li>
+                    )}
+                  </ul>
+
+                  {/* CTA */}
+                  <Button
+                    onClick={isComingSoon ? undefined : onOpenForm}
+                    variant={isHighlight ? "default" : "outline"}
+                    className={`w-full ${isHighlight
+                      ? "bg-[#00D084] hover:bg-[#00D084]/90 text-black font-bold border-0"
+                      : isComingSoon
+                        ? "border-white/10 hover:bg-white/10 text-[#A1A1AA]"
+                        : "border-white/10 hover:bg-white/10"
+                      }`}
+                  >
+                    {tier.cta}
+                  </Button>
+
+                  {/* Footer */}
+                  {tier.footerNote && (
+                    <p className="text-center text-xs text-[#A1A1AA] mt-3">
+                      {tier.footerNote}
+                    </p>
+                  )}
+
+                </motion.div>
+              )
+            })}
+        </div>
 
         {/* Comparison Section */}
         {t.comparison && (

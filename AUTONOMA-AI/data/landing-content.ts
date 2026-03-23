@@ -167,11 +167,11 @@ export const landingContent = {
           label: "Powerful Search",
           description: "Find any lead by name, company, or conversation text.",
         }, */
-        {
+        /* {
           icon: Download,
           label: "Direct Export",
           description: "Download full conversations for auditing or agent training.",
-        },
+        }, */
       ],
       eyebrow: "Smart Inbox",
       title: "All conversations. One single place.",
@@ -1493,11 +1493,11 @@ export const landingContent = {
           label: "Búsqueda Potente",
           description: "Encuentra cualquier lead por nombre, empresa o texto de conversación.",
         }, */
-        {
+        /* {
           icon: Download,
           label: "Exportación Directa",
           description: "Descarga conversaciones completas para auditoría o entrenamiento del agente.",
-        },
+        }, */
       ],
       eyebrow: "Bandeja de entrada inteligente",
       title: "Todas las conversaciones. Un solo lugar.",
