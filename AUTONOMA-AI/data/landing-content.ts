@@ -162,11 +162,11 @@ export const landingContent = {
           label: "Complete History",
           description: "Every message, every reply, in chronological and immutable order.",
         },
-        {
+        /* {
           icon: Search,
           label: "Powerful Search",
           description: "Find any lead by name, company, or conversation text.",
-        },
+        }, */
         {
           icon: Download,
           label: "Direct Export",
@@ -192,11 +192,11 @@ export const landingContent = {
           label: "Full History",
           description: "Every message your agent had with each prospect, in chronological order."
         },
-        {
+        /* {
           icon: BarChart3,
           label: "Real-Time Metrics",
           description: "Captured leads, active conversions, and close speed at a glance."
-        },
+        }, */
         {
           icon: UserCheck,
           label: "Lead Score",
@@ -207,11 +207,11 @@ export const landingContent = {
           label: "Qualified Lead Alerts",
           description: "Receive an email the moment a prospect enters, ready to close."
         },
-        {
+        /* {
           icon: FileDown,
           label: "Exportable Reports",
           description: "Download the complete monthly performance report in one click. Without depending on anyone.",
-        },
+        }, */
         {
           icon: Users,
           label: "User Roles",
@@ -1488,11 +1488,11 @@ export const landingContent = {
           label: "Historial Completo",
           description: "Cada mensaje, cada respuesta, en orden cronológico e inmutable.",
         },
-        {
+        /* {
           icon: Search,
           label: "Búsqueda Potente",
           description: "Encuentra cualquier lead por nombre, empresa o texto de conversación.",
-        },
+        }, */
         {
           icon: Download,
           label: "Exportación Directa",
@@ -1517,11 +1517,11 @@ export const landingContent = {
           label: "Historial Completo",
           description: "Cada mensaje que tu agente tuvo con cada prospecto, en orden cronológico.",
         },
-        {
+        /* {
           icon: BarChart3,
           label: "Métricas en Tiempo Real",
           description: "Leads capturados, conversiones activas y velocidad de cierre en un solo vistazo.",
-        },
+        }, */
         {
           icon: UserCheck,
           label: "Score de Leads",
@@ -1532,11 +1532,11 @@ export const landingContent = {
           label: "Alertas de Leads Calificados",
           description: "Recibe un email en el momento en que entra un prospecto listo para cerrar.",
         },
-        {
+        /* {
           icon: FileDown,
           label: "Reportes Exportables",
           description: "Descarga el rendimiento mensual completo en un clic. Sin depender de nadie.",
-        },
+        }, */
         {
           icon: Users,
           label: "Roles por Usuario",

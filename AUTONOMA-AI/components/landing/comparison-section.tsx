@@ -97,7 +97,7 @@ export function ComparisonSection() {
         </div>
 
         {/* Center Separator - Desktop only */}
-        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+        {/* <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -110,7 +110,7 @@ export function ComparisonSection() {
               <p className="text-xs font-bold text-white whitespace-nowrap">Set it & forget it</p>
             </div>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
